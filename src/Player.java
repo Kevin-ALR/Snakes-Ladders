@@ -7,7 +7,7 @@ public class Player {
             throw new IllegalArgumentException("The player number cannot be negative");
         }
         this.playerNumber = playerNumber;
-        this.currentTile = 1;
+        this.currentTile = 0;
     }
 
     public int getCurrentTile() {

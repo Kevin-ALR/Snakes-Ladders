@@ -1,11 +1,14 @@
-public class Tile {
-    private final TileType type;
+public abstract class Tile {
 
-    public Tile(TileType t){
-        this.type = t;
+    protected final char symbol;
+
+    Tile(char c){
+        this.symbol = c;
     }
 
-    public TileType getType() {
-        return type;
+    public char getSymbol() {
+        return symbol;
     }
+
+    public abstract int calculateEffect();
 }

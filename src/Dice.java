@@ -1,18 +1,18 @@
 public class Dice {
-    final private int numberOfOptions;
+    final private int faces;
 
     public Dice() {
         this(6);
     }
 
-    public Dice(int numberOfOptions) {
-        if (numberOfOptions <= 0) {
-            throw new IllegalArgumentException("The number of options cannot be negative or zero!");
+    public Dice(int faces) {
+        if (faces <= 0) {
+            throw new IllegalArgumentException("Dice must have at least one face!");
         }
-        this.numberOfOptions = numberOfOptions;
+        this.faces = faces;
     }
 
     public int roll() {
-        return (int)(1 + Math.random() * numberOfOptions);
+        return (int)(1 + Math.random() * faces);
     }
 }

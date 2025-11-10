@@ -1,12 +1,13 @@
 import java.util.Scanner;
 
-public class GameUI {
+public class ManualGameUI implements GameMode{
     final private Game game;
 
-    public GameUI(Game game) {
+    public ManualGameUI(Game game) {
         this.game = game;
     }
 
+    @Override
     public void startGame() {
         String option;
         Scanner sc = new Scanner(System.in);
@@ -27,5 +28,9 @@ public class GameUI {
         }
         System.out.println("-- GAME OVER --");
         sc.close();
+    }
+
+    public Game getGame() {
+        return game;
     }
 }
